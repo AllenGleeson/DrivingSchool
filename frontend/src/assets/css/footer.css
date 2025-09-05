@@ -1,0 +1,12 @@
+footer {
+    z-index: 2;
+    position: relative;
+}
+
+footer a {
+    padding: 6px;
+}
+
+footer svg {
+    fill: #fff;
+}
