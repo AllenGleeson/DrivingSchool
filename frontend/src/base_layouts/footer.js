@@ -2,7 +2,12 @@ import '../assets/css/footer.css'
 
 const Footer = () => {
     return (
-        <footer className='d-flex justify-content-center'>
+        <footer>
+            <div className='container'>
+                <div className="footer-content">
+                    <span>Allen Gleeson trading as With Glee</span>
+                </div>
+            </div>
         </footer>
     );
 }
