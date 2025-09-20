@@ -1,27 +1,205 @@
 .pricing {
-    height: 40rem;
+    padding: 5rem 0;
+    background: white;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.pricing-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.pricing-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.lesson-types, .packages {
+    margin-bottom: 4rem;
+}
+
+.lesson-types h3, .packages h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.packages-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.lesson-grid, .package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.lesson-card, .package-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.lesson-card:hover, .package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-card.popular {
+    border-color: #007bff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.lesson-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.lesson-card h4, .package-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.lesson-description, .package-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.lesson-features, .package-features {
+    margin-bottom: 2rem;
+}
+
+.feature-item {
     display: flex;
-    padding: 0rem 6rem;
     align-items: center;
+    margin-bottom: 0.8rem;
+    text-align: left;
 }
 
-.driver-grid {
-    padding: 1rem 1rem;
+.check {
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
 }
 
-.driver-card {
-    margin: 0rem 1rem;
-    display: flex;
-    align-items: center;
-    height: 10rem;
+.lesson-price {
+    margin-bottom: 1.5rem;
 }
 
-.driver-card img {
-    height: 80%;
-    border-radius: 1rem;
+.price, .current-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
 }
 
-.driver-card p {
-    margin-top: 0;
-    margin-bottom: 0rem;
+.period {
+    font-size: 1rem;
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.lessons {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.btn-lesson, .btn-package {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-lesson:hover, .btn-package:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.package-card .btn-package {
+    background: #28a745;
+}
+
+.package-card .btn-package:hover {
+    background: #218838;
+}
+
+.pricing-note {
+    background: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #007bff;
+}
+
+.pricing-note p {
+    margin: 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        padding: 0 1rem;
+    }
+    
+    .pricing-header h2 {
+        font-size: 2rem;
+    }
+    
+    .lesson-grid, .package-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lesson-card, .package-card {
+        padding: 1.5rem;
+    }
 }
