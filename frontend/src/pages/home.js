@@ -1,18 +1,20 @@
 import '../assets/css/home.css';
 import Hero from "../features/home/Hero";
+import Services from '../features/home/Services';
 import Pricing from '../features/home/Pricing';
 import About from '../features/home/About';
+import Testimonials from '../features/home/Testimonials';
 import Contact from '../features/home/Contact';
-import BookingCalendar from '../features/home/BookingCalendar';
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <div className="container">
+        <Services />
         <Pricing />
         <About />
-        <BookingCalendar />
+        <Testimonials />
         <Contact />
       </div>
     </div>
